@@ -1,4 +1,9 @@
 Propertymgt::Application.routes.draw do
+#get '/buildings/new' => 'buildings#new'
+resources :buildings, only: [:new, :create, :index]
+resources :owners, only: [:new, :create, :index]
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
