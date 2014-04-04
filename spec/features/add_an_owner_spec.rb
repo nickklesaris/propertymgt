@@ -16,7 +16,7 @@ scenario 'create a valid owner' do
   prev_count = Owner.count
   visit 'owners/new'
 
-  fill_in 'first_name',
+  fill_in 'owner_first_name',
   with: 'John'
 
   fill_in 'laste_name',
