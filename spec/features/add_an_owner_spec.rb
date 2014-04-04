@@ -19,10 +19,10 @@ scenario 'create a valid owner' do
   fill_in 'owner_first_name',
   with: 'John'
 
-  fill_in 'laste_name',
+  fill_in 'owner_last_name',
   with: 'Doe'
 
-  fill_in 'email',
+  fill_in 'owner_email',
   with: 'john.doe@gmail.com'
 
   fill_in 'company',

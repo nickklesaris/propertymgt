@@ -1,5 +1,7 @@
 <h1> Add a new building by filling in the form below.</h1>
 <%= form_for(@building, url: {action: "create"})  do |f| %>
-  <%= f.label :street_address %>
-  <%= f.text_field :street_address, required: true %> <br>
+  <%= f.label :address %>
+  <%= f.text_field :address, required: true %> <br>
+
+
 <% end %>

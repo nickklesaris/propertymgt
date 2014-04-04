@@ -2,4 +2,11 @@
 <%= form_for(@owner, url: {action: "create"})  do |f| %>
   <%= f.label :first_name %>
   <%= f.text_field :first_name, required: true %> <br>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, required: true %> <br>
+  <%= f.label :email %>
+  <%= f.text_field :email, required: true %> <br>
+  <%= f.label :company %>
+  <%= f.text_field :company, required: false %> <br>
+
 <% end %>

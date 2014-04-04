@@ -1,5 +1,5 @@
 class BuildingsController < ApplicationController
   def new
-    @building = building.new
+    @building = Building.new
   end
 end

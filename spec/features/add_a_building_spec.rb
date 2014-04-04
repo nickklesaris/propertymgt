@@ -20,19 +20,19 @@ scenario 'create a valid building' do
   prev_count = Building.count
   visit 'buildings/new'
 
-  fill_in 'street_address',
+  fill_in 'building_address',
   with: '101 Huntington AVE'
 
-  fill_in 'city',
+  fill_in 'building_city',
   with: 'Boston'
 
-  fill_in 'State',
+  fill_in 'building_state',
   with: 'MA'
 
-  fill_in 'postcode',
+  fill_in 'building_postcode',
   with: '02199'
 
-  fill_in 'description',
+  fill_in 'building_description',
   with: ''
 
   click_button 'Add Building'
