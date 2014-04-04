@@ -1,4 +1,5 @@
 <h1> Add a new owner by filling in the form below.</h1>
+<% @message %>
 <%= form_for(@owner, url: {action: "create"})  do |f| %>
   <%= f.label :first_name %>
   <%= f.text_field :first_name, required: true %> <br>
@@ -8,5 +9,5 @@
   <%= f.text_field :email, required: true %> <br>
   <%= f.label :company %>
   <%= f.text_field :company, required: false %> <br>
-
+  <%= f.submit "Add Owner"  %>
 <% end %>

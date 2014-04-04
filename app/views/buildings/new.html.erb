@@ -2,6 +2,13 @@
 <%= form_for(@building, url: {action: "create"})  do |f| %>
   <%= f.label :address %>
   <%= f.text_field :address, required: true %> <br>
-
-
+  <%= f.label :city %>
+  <%= f.text_field :city, required: true %> <br>
+  <%= f.label :state %>
+  <%= f.text_field :state, required: true %> <br>
+  <%= f.label :postcode %>
+  <%= f.text_field :postcode, required: true %> <br>
+  <%= f.label :description %>
+  <%= f.text_field :description, required: true %> <br>
+  <%= f.submit "Add Building"  %>
 <% end %>

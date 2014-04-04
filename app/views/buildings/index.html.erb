@@ -1,0 +1,10 @@
+<h1> List of buildings. </h1>
+
+<%- if  @buildings.present? -%>
+  <ul>
+    <%- @buildings.each do |b|  %>
+      <li> <%= #'Building address: ' + b.address + '   City: ' + b.city  + '   State: ' + b.state %> </li>
+    <%- end -%>
+  </ul>
+<%- end -%>
+
