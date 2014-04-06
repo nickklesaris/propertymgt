@@ -6,10 +6,11 @@ class BuildingsController < ApplicationController
   def create
     @building = Building.new(building_params)
     if @building.save
-      @message = 'Building created.'
       redirect_to '/buildings/new'
+      flash[:notice] = "Building created."
     else
-      #notice: 'Please check form for errors.'
+      redirect_to '/buildings/new'
+      flash[:notice] = "Building not created. Check form for errors."
     end
   end
 
@@ -18,5 +19,6 @@ class BuildingsController < ApplicationController
   end
 
   def building_params
+    params.require(:building).permit(:address, :city, :state, :postcode, :owner_id)
   end
 end

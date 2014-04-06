@@ -1,10 +1,21 @@
-<h1> List of buildings. </h1>
+<h1> Buildings </h1>
+<table>
+  <thead>
+    <tr>
+      <th>Address    </th>
+      <th>City       </th>
+      <th>State      </th>
+    </tr>
+  </thead>
 
-<%- if  @buildings.present? -%>
-  <ul>
-    <%- @buildings.each do |b|  %>
-      <li> <%= #'Building address: ' + b.address + '   City: ' + b.city  + '   State: ' + b.state %> </li>
-    <%- end -%>
-  </ul>
+  <tbody>
+    <% @buildings.each do |b| %>
+    <tr>
+      <td><%= b.address %></td>
+      <td><%= b.city %> </td>
+      <td><%= b.state %> </td>
+    </tr>
+    <br>
+  </tbody>
+</table>
 <%- end -%>
-

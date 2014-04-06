@@ -6,10 +6,10 @@ class OwnersController < ApplicationController
   def create
     @owner = Owner.new(owner_params)
       if @owner.save
-        @message = 'Owner created.'
         redirect_to '/owners/new'
+        flash[:notice] = "Owner created."
       else
-        @message = 'Please check form for errors.'
+
       end
   end
 
@@ -18,6 +18,7 @@ class OwnersController < ApplicationController
   end
 
   def owner_params
+    params.require(:owner).permit(:first_name, :last_name, :email)
   end
 
 end

@@ -36,9 +36,31 @@ scenario 'create a valid building' do
   with: ''
 
   click_button 'Add Building'
-  #expect(page).to have_content('Building created.')
+  expect(page).to have_content('Building created.')
   expect(Building.count).to eql(prev_count +1)
   end
 
-#scenario 'create an invalid building' do
+scenario 'create an invalid building' do
+  prev_count = Building.count
+  visit 'buildings/new'
+
+  fill_in 'building_address',
+  with: '202 Western AVE'
+
+  fill_in 'building_city',
+  with: 'Boston'
+
+  fill_in 'building_state',
+  with: 'ZZ'
+
+  fill_in 'building_postcode',
+  with: '02199'
+
+  fill_in 'building_description',
+  with: ''
+
+  click_button 'Add Building'
+  expect(page).to have_content('Building not created. Check form for errors.')
+  expect(Building.count).to eql(prev_count)
+end
 end

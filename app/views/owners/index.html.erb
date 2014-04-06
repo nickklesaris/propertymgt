@@ -1,9 +1,21 @@
-<h1> List of owners. </h1>
+<h1> Owners </h1>
+<table>
+  <thead>
+    <tr>
+      <th>First Name </th>
+      <th>Last Name </th>
+      <th>email </th>
+    </tr>
+  </thead>
 
-<%- if  @owners.present? -%>
-  <ul>
-    <%- @owners.each do |own|  %>
-      <li> <%= 'First Name: ' + own.first_name + '   Last Name:   ' + own.last_name  + '   email: ' + own.email %> </li>
-    <%- end -%>
-  </ul>
+  <tbody>
+    <% @owners.each do |owner| %>
+    <tr>
+      <td><%= owner.first_name %></td>
+      <td><%= owner.last_name %> </td>
+      <td><%= owner.email %> </td>
+    </tr>
+    <br>
+  </tbody>
+</table>
 <%- end -%>

@@ -29,7 +29,7 @@ scenario 'create a valid owner' do
   with: ''
 
   click_button 'Add Owner'
-  #expect(page).to have_content('Owner created.')
+  expect(page).to have_content('Owner created.')
   expect(Owner.count).to eql(prev_count +1)
   end
 
